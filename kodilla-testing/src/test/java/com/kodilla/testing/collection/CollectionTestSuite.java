@@ -1,17 +1,20 @@
 package com.kodilla.testing.collection;
-import org.junit.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CollectionTestSuite {
 
-    @Before
+    @BeforeEach
     public void before() {
         System.out.println("Test Case: begin");
     }
-    @After
+    @AfterEach
     public void after() {
         System.out.println("Test Case: end");
     }
@@ -24,21 +27,21 @@ public class CollectionTestSuite {
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
 
         //When
-        ArrayList<Integer> emptylist = new ArrayList<Integer>();
+        List<Integer> emptylist = new ArrayList<>();
         List<Integer> emptyListAfterExtermination = exterminator.exterminate(emptylist);
         System.out.println("Actual arraylist" + emptyListAfterExtermination);
 
         //Then
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         System.out.println("Expected arraylist" + result);
-        Assert.assertEquals(result, emptyListAfterExtermination);
+        assertEquals(result, emptyListAfterExtermination);
     }
 
     @DisplayName("when the list contains odd and even numbers, " +
             "then the method should return only even numbers")
 
     @Test
-    public void testOddNumbersExterminatorNormalListt() {
+    public void testOddNumbersExterminatorNormalList() {
         //Given
         OddNumbersExterminator exterminator2 = new OddNumbersExterminator();
 
