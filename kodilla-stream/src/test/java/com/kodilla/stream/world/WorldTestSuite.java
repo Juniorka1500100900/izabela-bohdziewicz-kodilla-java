@@ -1,10 +1,11 @@
 package com.kodilla.stream.world;
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class WorldTestSuite {
 
