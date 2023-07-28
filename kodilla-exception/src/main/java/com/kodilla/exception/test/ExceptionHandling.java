@@ -9,7 +9,7 @@ public class ExceptionHandling {
         } catch (Exception e) {
             System.out.println("Wrong numbers!");
         } finally {
-            System.out.println("Try something else than x >= 2 || x < 1 || y == 1.5");
+            System.out.println("Done.");
         }
     }
 }
