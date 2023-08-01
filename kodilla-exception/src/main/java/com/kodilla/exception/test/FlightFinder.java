@@ -14,7 +14,6 @@ public class FlightFinder {
         airportMap.put("Beijing", false);
 
         if (airportMap.containsKey(flight.getArrivalAirport())) {
-            System.out.println("Ready to land in: " + flight.getArrivalAirport());
         } else {
             throw new RouteNotFoundException();
         }
