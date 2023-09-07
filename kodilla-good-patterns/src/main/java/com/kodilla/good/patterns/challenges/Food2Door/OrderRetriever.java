@@ -13,7 +13,7 @@ public class OrderRetriever {
 
         extraFoodShop.getProducts().add(new Product("Bananas", 89.90));
         extraFoodShop.getProducts().add(new Product("Fries", 167.00));
-        //glutenFreeShop.getProducts().add(new Product("Bread full of gluten", 6.66));
+        glutenFreeShop.getProducts().add(new Product("Bread full of gluten", 6.66));
         healthyShop.getProducts().add(new Product("Snickers bars", 999.99));
 
         suppliers.add(extraFoodShop);
