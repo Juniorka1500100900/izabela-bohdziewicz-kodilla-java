@@ -28,6 +28,6 @@ public class BoardTestSuite {
         //Then
         assertEquals("Run 10km.", board.getToDoList().getTasks().get(0));
         assertEquals("Finish Kodilla task.", board.getInProgressList().getTasks().get(0));
-        assertEquals("Wake up and try not to kill yourself.\"", board.getDoneList().getTasks().get(0));
+        assertEquals("Wake up and try not to kill yourself.", board.getDoneList().getTasks().get(0));
     }
 }
