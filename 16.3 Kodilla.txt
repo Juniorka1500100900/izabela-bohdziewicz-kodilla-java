@@ -1,0 +1,40 @@
+CREATE TABLE ISSUESLISTS (
+    ID SERIAL PRIMARY KEY,
+    NAME VARCHAR(255) NOT NULL
+);
+CREATE TABLE ISSUES (
+    ID SERIAL PRIMARY KEY,
+    ISSUESLIST_ID INT REFERENCES ISSUESLISTS(ID),
+    SUMMARY VARCHAR(255) NOT NULL,
+    DESCRIPTION TEXT,
+    USER_ID_ASSIGNEDTO INT REFERENCES USERS(ID)
+);
+
+INSERT INTO ISSUESLISTS (NAME) VALUES ('ToDo');
+INSERT INTO ISSUESLISTS (NAME) VALUES ('In progress');
+INSERT INTO ISSUESLISTS (NAME) VALUES ('Done');
+COMMIT;
+INSERT INTO ISSUES (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES
+    (1, 'Brush my teeth', 'Use some toothpaste, toothbrush and water.', 1),
+    (1, 'Make coffee', 'Prepare nice hot drink in the kitchen.', 2),
+    (1, 'Open laptop', 'Find your laptop and open it.', 3),
+    (1, 'Connect to Teams call', 'Open your invite and connect.', 4),
+    (1, 'Try not to kill your boss', 'Think about birds and dogs while he is bullshitting.', 5);
+COMMIT;
+INSERT INTO ISSUES (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES
+    (2, 'Breathe', 'Open your moth and try not to die.', 1),
+    (2, 'Smile', 'Do the Joker face.', 2),
+    (2, 'Answer questions', 'If he asks, reply.', 3),
+    (2, 'Smile nicer', 'Loose the Joker attitude.', 4),
+    (2, 'Say bye', 'Smile again and disconnect.', 5);
+COMMIT;
+INSERT INTO ISSUES (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES
+    (3, 'Create some tables in Kodilla', 'Open your console and write code.', 1),
+    (3, 'Play with Dudu', 'Play with your dog.', 2),
+    (3, 'Wash your hair', 'Take a shower and wash more than only the tears from your face.', 3),
+    (3, 'Vacuum', 'Vacuum the entire apartment including corridor.', 4),
+    (3, 'Have fun', 'Run 10km before work.', 5);
+COMMIT;
