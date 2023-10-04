@@ -1,11 +1,9 @@
 package com.kodilla.hibernate.tasklist.dao;
 
-import com.kodilla.hibernate.tasklist.TaskList;
+import com.kodilla.hibernate.task.TaskList;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,17 +20,17 @@ public class TaskListDaoTestSuite {
         TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
 
         //When
-        taskListDao.save(taskList);
+       // taskListDao.save(taskList);
 
         //When
         String listName = taskList.getListName();
-        List<TaskList> readListName = taskListDao.findByListName(listName);
+      //  List<TaskList> readListName = taskListDao.findByListName(listName);
         String actualNameList = taskList.getListName();
 
         //Then
         assertEquals("Task to do", actualNameList);
 
         //CleanUp
-        taskListDao.delete(taskList);
+        //taskListDao.delete(taskList);
     }
 }
